@@ -1,0 +1,215 @@
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/ptsans.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/ptsansbold.woff2") format("woff2");
+  font-display: swap;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.advantages {
+  text-align: center;
+}
+.advantages__wrapper {
+  padding: 32px 18px 16px;
+  text-align: center;
+}
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+.advantages__list-services {
+  padding: 23px 18px 46px;
+  color: #000000;
+  background-color: #ffffff;
+}
+.advantages__list-text {
+  padding: 24px 26px 28px;
+  color: #000000;
+  background-color: #e7e5e5;
+}
+.button {
+  display: block;
+  padding: 16px 20px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: #81b3d2;
+  border: none;
+}
+.catalog-photo {
+  padding: 37px 20px 25px;
+  text-align: center;
+}
+.catalog-photo__wrapper {
+  margin-bottom: 25px;
+}
+.catalog-photo__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.catalog-video {
+  text-align: center;
+}
+.catalog-video__wrapper {
+  margin-bottom: 38px;
+}
+.description {
+  margin: 0;
+}
+.feedback-form {
+  margin-bottom: 56px;
+}
+.feedback-form__group {
+  margin-bottom: 39px;
+  border: none;
+}
+.feedback-form__title {
+  margin-bottom: 20px;
+}
+.feedback-form__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.feedback-form__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.feedback-form__input {
+  padding: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: capitalize;
+}
+.feedback {
+  padding: 36px 20px 22px;
+  text-align: center;
+}
+.feedback__wrapper {
+  margin-bottom: 28px;
+}
+.hero-inner {
+  padding: 52px 19px 67px;
+  text-align: center;
+  background-color: #81b3d2;
+  background-image: url("../../img/index/background-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero {
+  padding: 90px 19px 85px;
+  text-align: center;
+  background-color: #81b3d2;
+  background-image: url("../../img/index/background-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-container {
+  flex-grow: 1;
+}
+.main-footer {
+  padding: 33px 40px;
+  text-align: center;
+}
+.main-footer__social-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.main-header {
+  position: relative;
+  min-height: 56px;
+}
+.main-header__logo {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 320px / 2);
+}
+.main-nav {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  background-image: url("../../img/index/menu-icon.svg");
+  background-size: 23px 22px;
+}
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+.main-nav__link {
+  display: block;
+  text-decoration: none;
+}
+.modal-error {
+  padding: 45px 42px 35px;
+}
+.modal-success {
+  padding: 39px 39px 20px;
+}
+.page {
+  height: 100%;
+  width: 100%;
+}
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+  background-color: #ffffff;
+}
+.search-hotel {
+  padding: 38px 18px 8px;
+  text-align: center;
+}
+.search-hotel__description {
+  margin-bottom: 32px;
+}
+.search-hotel__search-button {
+  display: inline-block;
+  margin-bottom: 49px;
+  text-decoration: none;
+}
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+/*# sourceMappingURL=style.css.map */
