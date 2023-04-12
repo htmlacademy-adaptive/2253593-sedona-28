@@ -12,9 +12,7 @@
 }
 
 .feedback-form__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  .list-reset();
 }
 
 .feedback-form__item:not(:last-child) {
@@ -22,10 +20,12 @@
 }
 
 .feedback-form__input {
+  color: @color-text-secondary;
+  background-color: @color-background-complementary;
+  border-color: transparent;
   padding: 16px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  color: #000000;
   text-transform: capitalize;
 }

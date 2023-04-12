@@ -2,16 +2,14 @@
   position: absolute;
   top: 17px;
   right: 20px;
-  background-image: url("../../img/index/menu-icon.svg");
+  background-image: url("../img/header/menu-icon.svg");
   background-size: 23px 22px;
 }
 
 .main-nav__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  color: #ffffff;
-  background-color: #81b3d2;
+  .list-reset();
+  color: @color-text-accent;
+  background-color: @color-background-secondary;
 }
 
 .main-nav__link {
