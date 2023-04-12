@@ -1,20 +1,30 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/ptsans.woff2") format("woff2");
+  src: url("../fonts/ptsans.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/ptsansbold.woff2") format("woff2");
+  src: url("../fonts/ptsansbold.woff2") format("woff2");
   font-display: swap;
 }
 .visually-hidden {
@@ -35,26 +45,24 @@ img {
   text-align: center;
 }
 .advantages__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  @include reset-list;
   color: #ffffff;
   background-color: #81b3d2;
 }
 .advantages__list-services {
-  padding: 23px 18px 46px;
   color: #000000;
   background-color: #ffffff;
+  padding: 23px 18px 46px;
 }
 .advantages__list-text {
-  padding: 24px 26px 28px;
   color: #000000;
   background-color: #e7e5e5;
+  padding: 24px 26px 28px;
 }
 .button {
   display: block;
   padding: 16px 20px;
-  font-family: "PT Sans", sans-serif;
+  font-family: inherit;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -63,6 +71,7 @@ img {
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
+  cursor: pointer;
 }
 .catalog-photo {
   padding: 37px 20px 25px;
@@ -122,7 +131,8 @@ img {
   padding: 52px 19px 67px;
   text-align: center;
   background-color: #81b3d2;
-  background-image: url("../../img/index/background-mobile.jpg");
+  background-image: url("../img/index/background-mobile.jpg");
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -130,7 +140,8 @@ img {
   padding: 90px 19px 85px;
   text-align: center;
   background-color: #81b3d2;
-  background-image: url("../../img/index/background-mobile.jpg");
+  background-image: url("../img/index/background-mobile.jpg");
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -153,7 +164,8 @@ img {
 .main-header__logo {
   position: absolute;
   top: 0;
-  left: calc(50% - 320px / 2);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main-nav {
   position: absolute;
@@ -173,10 +185,10 @@ img {
   display: block;
   text-decoration: none;
 }
-.modal-error {
+.modal__error {
   padding: 45px 42px 35px;
 }
-.modal-success {
+.modal__success {
   padding: 39px 39px 20px;
 }
 .page {
