@@ -8,21 +8,19 @@
 }
 
 .advantages__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  color: #ffffff;
-  background-color: #81b3d2;
+  @include reset-list;
+  color: @color-text-accent;
+  background-color: @color-background-secondary;
 }
 
 .advantages__list-services {
+  color: @color-text-secondary;
+  background-color: @color-background-primary;
   padding: 23px 18px 46px;
-  color: #000000;
-  background-color: #ffffff;
 }
 
 .advantages__list-text {
+  color: @color-text-secondary;
+  background-color: @color-background-tertiary;
   padding: 24px 26px 28px;
-  color: #000000;
-  background-color: #e7e5e5;
 }
