@@ -58,6 +58,7 @@ img {
 }
 .advantages__picture {
   display: block;
+  width: 100%;
 }
 .advantages__list-text {
   color: #000000;
@@ -147,6 +148,9 @@ img {
   display: block;
   margin-bottom: 15px;
 }
+.catalog-photo__picture {
+  width: 100%;
+}
 .catalog-photo__title-card {
   margin: 0;
   text-align: left;
@@ -232,6 +236,9 @@ img {
 }
 .catalog-video__description {
   margin: 0;
+}
+.catalog-video__picture {
+  width: 100%;
 }
 @media (min-width: 768px) {
   .catalog-video {
@@ -467,6 +474,50 @@ img {
   background-color: #81b3d2;
   position: absolute;
   width: 100%;
+  min-height: 55px;
+}
+.main-nav__toggle {
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 2;
+  top: 17px;
+  right: 20px;
+  width: 23px;
+  height: 22px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+.main-nav--closed .main-nav__toggle::before {
+  background-color: #81b3d2;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  box-shadow: 0 9px 0 #81b3d2, 0 18px 0 #81b3d2;
+}
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: rgba(129, 179, 210, 0.6);
+  box-shadow: 0 9px 0 rgba(129, 179, 210, 0.6), 0 18px 0 rgba(129, 179, 210, 0.6);
+}
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: rgba(129, 179, 210, 0.3);
+  box-shadow: 0 9px 0 rgba(129, 179, 210, 0.3), 0 18px 0 rgba(129, 179, 210, 0.3);
+}
+.main-nav--opened .main-nav__toggle {
+  background-color: #81b3d2;
+  position: absolute;
+  top: 17px;
+  left: auto;
+  right: 20px;
+  background-image: url("../img/header/cross-icon.svg");
+  background-size: 23px 23px;
+  background-repeat: no-repeat;
+}
+.main-nav__item {
+  min-height: 56px;
 }
 .main-nav__item:first-child {
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
