@@ -9,4 +9,18 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  &--status:hover {
+    opacity: 0.6;
+  }
+
+  &--status:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__logo {
+    z-index: 3;
+  }
 }

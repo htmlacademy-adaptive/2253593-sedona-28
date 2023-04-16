@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body">
+<body class="page__body body-fonts">
   <header class="main-header">
-    <a class="main-header__logo" href="index.html">
+    <a class="main-header__logo main-header__logo--status" href="index.html">
       <img src="img/header/logo.svg" width="185" height="96" alt="Городок Седона.">
     </a>
     <nav class="main-nav main-nav--closed">
@@ -82,23 +82,23 @@
         </fieldset>
         <fieldset class="feedback-form__group">
           <legend class="feedback-form__title title">Ваше общее впечатление:</legend>
-          <ul class="feedback-form__list">
-            <li class="feedback-form__item">
-              <label class="feedback-form__label control">
+          <ul class="feedback-form__list feedback-form__list-impression">
+            <li class="feedback-form__item feedback-form__item-impression">
+              <label class="feedback-form__label-control control">
                 <input class="visually-hidden control__input" type="radio" name="impression" value="positive" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Скорее положительное</span>
               </label>
             </li>
-            <li class="feedback-form__item">
-              <label class="feedback-form__label control">
+            <li class="feedback-form__item feedback-form__item-impression">
+              <label class="feedback-form__label-control control">
                 <input class="visually-hidden control__input" type="radio" name="impression" value="negative">
                 <span class="control__mark"></span>
                 <span class="control__label">Скорее отрицательное</span>
               </label>
             </li>
-            <li class="feedback-form__item">
-              <label class="feedback-form__label control">
+            <li class="feedback-form__item feedback-form__item-impression">
+              <label class="feedback-form__label-control control">
                 <input class="visually-hidden control__input" type="radio" name="impression" value="indistinct">
                 <span class="control__mark"></span>
                 <span class="control__label">Затрудняюсь ответить</span>
@@ -108,30 +108,30 @@
         </fieldset>
         <fieldset class="feedback-form__group">
           <legend class="feedback-form__title title">Посещенные достопримечательности:</legend>
-          <ul class="feedback-form__list">
-            <li class="feedback-form__item">
-              <label class="feedback-form__label control">
+          <ul class="feedback-form__list feedback-form__list-signts">
+            <li class="feedback-form__item feedback-form__item-signts">
+              <label class="feedback-form__label-control control">
                 <input class="visually-hidden control__input" type="checkbox" name="devil's-bridge" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Мост Дьявола</span>
               </label>
             </li>
-            <li class="feedback-form__item">
-              <label class="feedback-form__label control">
+            <li class="feedback-form__item feedback-form__item-signts">
+              <label class="feedback-form__label-control control">
                 <input class="visually-hidden control__input" type="checkbox" name="mount-bell" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Гора-Колокол</span>
               </label>
             </li>
-            <li class="feedback-form__item">
-              <label class="feedback-form__label control">
+            <li class="feedback-form__item feedback-form__item-signts">
+              <label class="feedback-form__label-control control">
                 <input class="visually-hidden control__input" type="checkbox" name="slide-park" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Слайд-парк</span>
               </label>
             </li>
-            <li class="feedback-form__item">
-              <label class="feedback-form__label control">
+            <li class="feedback-form__item feedback-form__item-signts">
+              <label class="feedback-form__label-control control">
                 <input class="visually-hidden control__input" type="checkbox" name="red-rocks">
                 <span class="control__mark"></span>
                 <span class="control__label">Красные скалы</span>
@@ -139,11 +139,12 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback-form__group">
+        <fieldset class="feedback-form__group feedback-form__group-textarea">
           <legend class="feedback-form__title title">Опишите свои эмоции:</legend>
-          <label class="feedback-form__label" for="emotions"></label>
-          <textarea class="feedback-form__textarea feedback-form__textarea-fonts" name="emotions" id="emotions"
-            placeholder="Опишите подробно все свои восторги"></textarea>
+          <label class="feedback-form__label-textarea">
+            <textarea class="feedback-form__textarea feedback-form__textarea-fonts"
+              placeholder="Опишите подробно все свои восторги"></textarea>
+          </label>
         </fieldset>
       </form>
       <div class="feedback__wrapper-form">
@@ -214,13 +215,15 @@
       <p class="modal__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их
         заполнить</p>
     </div>
-    <button class="modal-button button" type="button">ОК</button>
+    <button class="modal-error-button button" type="button">ОК</button>
     <div class="modal__success">
       <h2 class="modal__title title title--size">Ваш отзыв отправлен!</h2>
       <p class="modal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В
         ближайшее время мы опубликуем его на сайте.</p>
     </div>
-    <button class="modal-button button" type="button">Закрыть окно</button>
+    <div class="modal__button-wrapper">
+      <button class="modal-success-button button" type="button">Закрыть окно</button>
+    </div>
   </div>
 </body>
 
