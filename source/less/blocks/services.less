@@ -1,7 +1,11 @@
 .services {
   color: @color-text-secondary;
   background-color: @color-background-primary;
-  padding: 23px 18px 46px;
+  padding: 23px 18px 46px 65px;
+}
+
+.services__item {
+  text-align: left;
 }
 
 .services__item:not(:last-child) {
@@ -15,4 +19,27 @@
 
 .services__description {
   color: @color-text-primary;
+}
+
+@media (min-width: @tablet-width) {
+  .services {
+    padding: 0;
+  }
+
+  .services__item {
+    width: 256px;
+    padding: 60px 33px 60px;
+    text-align: center;
+  }
+
+  .services__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .services__item {
+    width: 400px;
+    padding: 166px 50px 67px;
+  }
 }
