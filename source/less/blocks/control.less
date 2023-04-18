@@ -1,3 +1,8 @@
+.control {
+  position: relative;
+  display: block;
+}
+
 .control__label {
   color: @color-text-secondary;
   padding-left: 62px;
@@ -5,4 +10,18 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: none;
+}
+
+.control-mark {
+  position: absolute;
+  background-color: @color-background-complementary;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
 }

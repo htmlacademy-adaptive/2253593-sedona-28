@@ -1,4 +1,5 @@
 .catalog-video {
+  position: relative;
   padding: 17px 20px 0;
   text-align: center;
 }
@@ -18,8 +19,18 @@
   margin: 0;
 }
 
-.catalog-video__picture {
-  width: 100%;
+.catalog-video__picture::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 50px;
+  width: 48px;
+  height: 54px;
+  background-image: url("../img/catalog/play-icon.png");
+  background-repeat: no-repeat;
+  background-size: 48px 54px;
+  background-position: center center;
 }
 
 @media (min-width: @tablet-width) {

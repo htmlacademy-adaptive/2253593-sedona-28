@@ -1,8 +1,17 @@
 .feedback-form__group {
   padding: 0;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 24px;
   border: none;
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: @color-stripe-inner;
+    left: -20px;
+    width: calc(100% + 40px);
+  }
 }
 
 .feedback-form__title {
@@ -13,6 +22,22 @@
 
 .feedback-form__list {
   .list-reset();
+}
+
+.feedback-form__list-name {
+  padding-bottom: 39px;
+}
+
+.feedback-form__list-contacts {
+  padding-bottom: 34px;
+}
+
+.feedback-form__list-impression {
+  padding-bottom: 24px;
+}
+
+.feedback-form__list-signts {
+  padding-bottom: 24px;
 }
 
 .feedback-form__item:not(:last-child) {

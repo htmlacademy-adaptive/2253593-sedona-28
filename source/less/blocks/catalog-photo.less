@@ -1,10 +1,18 @@
 .catalog-photo {
-  padding: 30px 20px 25px;
+  padding: 37px 20px 0;
 }
 
 .catalog-photo__wrapper {
-  margin-bottom: 25px;
   text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: @color-stripe-inner;
+    left: -20px;
+    width: calc(100% + 40px);
+  }
 }
 
 .catalog-photo__title {
@@ -14,12 +22,29 @@
 
 .catalog-photo__description {
   margin: 0;
-  margin-bottom: 40px;
+  padding-bottom: 25px;
 }
 
 .catalog-photo__list {
   .list-reset();
   padding-top: 24px;
+}
+
+.catalog-photo__item {
+  margin-bottom: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: @color-stripe-inner;
+    left: -20px;
+    width: calc(100% + 40px);
+  }
+}
+
+.catalog-photo__item:last-child {
+  margin-bottom: 0;
 }
 
 .catalog-photo__link {
@@ -40,8 +65,13 @@
 }
 
 .catalog-photo__like-amount {
+  display: block;
   text-align: left;
-  padding-left: 37px;
+  padding: 5px 10px 25px 37px;
+  background-image: url("../img/catalog/like-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 23px 21px;
+  background-position: 0 0;
 }
 
 @media (min-width: @tablet-width) {
