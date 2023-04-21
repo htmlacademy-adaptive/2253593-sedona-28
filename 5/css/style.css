@@ -369,6 +369,7 @@ a {
 }
 .catalog-video__picture {
   display: block;
+  margin: 0 auto;
 }
 .catalog-video__button {
   position: absolute;
