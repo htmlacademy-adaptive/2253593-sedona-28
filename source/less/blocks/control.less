@@ -1,18 +1,18 @@
 .control {
   position: relative;
   display: block;
+  padding: 10px 0 10px 62px;
 }
 
 .control__label {
   color: @color-text-secondary;
-  padding-left: 62px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: none;
 }
 
-.control-mark {
+.control__mark {
   position: absolute;
   background-color: @color-background-complementary;
   top: 0;
@@ -20,8 +20,49 @@
   width: 46px;
   height: 46px;
   border-radius: 4px;
+
+  &:hover {
+    background-color: @color-background-input-hover;
+  }
+
+  &:active {
+    background-color: @color-background-radio-active;
+    opacity: 0.3;
+  }
 }
 
-.control-input[type="radio"] + .control-mark {
+.control__input-radio + .control__mark {
   border-radius: 50%;
+}
+
+.control__input-radio:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+  background-color: @color-text-primary;
+  border-radius: 50%;
+}
+
+.control__input-checkbox:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/form/tick.svg");
+  background-size: 22px 16px;
+  background-repeat: no-repeat;
+}
+
+.control__input:disabled + .control__mark {
+  opacity: 0.1;
+}
+
+.control__input:disabled ~ .control__label {
+  opacity: 0.1;
 }

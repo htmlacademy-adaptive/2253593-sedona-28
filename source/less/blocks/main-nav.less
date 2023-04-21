@@ -48,6 +48,15 @@
   box-shadow: 0 9px 0 fade(@color-background-button, 30%), 0 18px 0 fade(@color-background-button, 30%);
 }
 
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+
+.main-nav--closed {
+  background-color: @color-background-primary;
+  z-index: 0;
+}
+
 .main-nav--opened .main-nav__toggle {
   background-color: transparent;
   position: absolute;
@@ -73,13 +82,8 @@
   display: none;
 }
 
-.main-nav--nojs .main-nav__list {
+.main-nav--nojs {
   position: relative;
-  min-height: 0;
-}
-
-.main-nav--nojs .main-nav__item {
-  display: block;
 }
 
 .main-nav__item {
@@ -121,9 +125,10 @@
 
 @media (min-width: @tablet-width) {
   .main-nav--opened::after {
-    background-image: none;
+    display: none;
   }
 
+  .main-nav--closed .main-nav__list,
   .main-nav__list {
     background-color: @color-background-primary;
     display: grid;

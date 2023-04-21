@@ -15,6 +15,10 @@
   }
 }
 
+.catalog-photo__picture {
+  display: block;
+}
+
 .catalog-photo__title {
   margin: 0;
   margin-bottom: 30px;
@@ -49,12 +53,19 @@
 
 .catalog-photo__link {
   display: block;
-  margin-bottom: 15px;
+}
+
+.catalog-photo__wrapper-details {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 25px;
 }
 
 .catalog-photo__title-card {
   margin: 0;
   text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .catalog-photo__author-name {
@@ -64,14 +75,22 @@
   text-transform: none;
 }
 
+.catalog-photo__wrapper-like {
+  padding-left: 23px;
+}
+
 .catalog-photo__like-amount {
   display: block;
   text-align: left;
-  padding: 5px 10px 25px 37px;
-  background-image: url("../img/catalog/like-icon.svg");
-  background-repeat: no-repeat;
-  background-size: 23px 21px;
-  background-position: 0 0;
+  margin-left: 14px;
+  font-weight: 700;
+}
+
+.catalog-photo__icon {
+  position: absolute;
+  right: 257px;
+  bottom: 30px;
+  fill: @color-card-icon-primary;
 }
 
 @media (min-width: @tablet-width) {
@@ -83,6 +102,15 @@
     width: 458px;
     margin: 0 auto;
     margin-bottom: 67px;
+    padding: 0 6px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .catalog-photo__item::after {
+    display: none;
   }
 
   .catalog-photo__list {
@@ -94,32 +122,49 @@
   .catalog-photo__item {
     position: relative;
     background-color: @color-background-complementary;
+    margin-bottom: 0;
+
+    &:nth-of-type(3) {
+      background-color: @color-background-card;
+    }
   }
 
   .catalog-photo__item:first-child {
     grid-column: 1/3;
   }
 
+  .catalog-photo__wrapper-details {
+    padding: 22px 20px 15px;
+  }
+
   .catalog-photo__description {
     margin: 0;
+  }
+
+  .catalog-photo__title-card {
+    padding-right: 80px;
+  }
+
+  .catalog-photo__author-name {
+    margin-bottom: 0;
+    padding-right: 80px;
+  }
+
+  .catalog-photo__wrapper-like {
+    padding-left: 0;
   }
 
   .catalog-photo__like-amount {
     position: absolute;
     bottom: 27px;
     right: 20px;
-    padding-left: 9px;
+    padding: 0;
+    margin-left: 9px;
   }
 
-  .catalog-photo__title-card {
-    margin: 0;
-    margin-top: 22px;
-    margin-left: 20px;
-  }
-
-  .catalog-photo__author-name {
-    margin-left: 20px;
-    margin-bottom: 15px;
+  .catalog-photo__icon {
+    bottom: 31px;
+    right: 61px;
   }
 }
 
@@ -140,5 +185,23 @@
 
   .catalog-photo__item:first-child {
     grid-column: 1/4;
+
+    & .catalog-photo__wrapper-details {
+      padding: 22px 20px 15px 21px;
+    }
+  }
+
+  .catalog-photo__wrapper-details {
+    background-color: @color-background-card-details;
+    color: @color-text-accent;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 17px 20px 17px 25px;
+  }
+
+  .catalog-photo__icon {
+    fill: @color-card-icon-secondary;
   }
 }

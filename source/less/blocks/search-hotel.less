@@ -16,13 +16,32 @@
 .search-hotel__search-button {
   display: inline-block;
   padding: 16px 20px;
+
+  &:hover {
+    background-color: @color-background-hover;
+  }
+
+  &:active {
+    background-color: @color-background-active;
+    color: fade(@color-text-accent, 30%);
+  }
+
+  &:disabled {
+    background-color: @color-background-disabled;
+  }
+}
+
+.search-hotel iframe {
+  border: none;
+  display: block;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .search-hotel__wrapper {
     width: 458px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding: 60px 0 55px;
   }
 
   .search-hotel__description {
@@ -33,5 +52,11 @@
     margin: 0 auto;
     padding: 14px 20px 18px;
     width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search-hotel__wrapper {
+    padding-bottom: 66px;
   }
 }

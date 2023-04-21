@@ -1,10 +1,31 @@
 .copyright__link {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .copyright__description {
   margin: 0;
   margin-right: 12px;
   color: @color-text-secondary;
+
+  &:hover {
+    color: @color-link-hover;
+  }
+
+  &:active {
+    color: @color-link-footer-active;
+  }
+}
+
+.copyright__link svg {
+  fill: @color-link-footer;
+}
+
+.copyright__link:hover svg {
+  fill: @color-link-hover;
+}
+
+.copyright__link:active svg {
+  fill: @color-link-footer-active;
 }

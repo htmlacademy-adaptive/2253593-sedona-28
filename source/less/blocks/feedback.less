@@ -29,6 +29,19 @@
 .feedback__button {
   width: 280px;
   padding: 16px 20px;
+
+  &:hover {
+    background-color: @color-background-hover;
+  }
+
+  &:active {
+    background-color: @color-background-active;
+    color: fade(@color-text-accent, 30%);
+  }
+
+  &:disabled {
+    background-color: @color-background-disabled;
+  }
 }
 
 .feedback__note {
@@ -48,6 +61,10 @@
     width: 436px;
     margin: 0 auto;
     margin-bottom: 108px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .feedback__wrapper-form {
