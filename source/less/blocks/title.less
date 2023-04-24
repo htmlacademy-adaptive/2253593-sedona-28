@@ -1,9 +1,20 @@
 .title {
   font-size: 18px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 1.44;
 }
 
-.title--size {
+.title--size,
+.title--size-footer {
   font-size: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .title {
+    font-size: 21px;
+  }
+
+  .title--size {
+    font-size: 30px;
+  }
 }

@@ -4,3 +4,27 @@
   justify-content: center;
   gap: 6px;
 }
+
+.social-list__item {
+  width: 48px;
+  height: 48px;
+}
+
+.social-list__item svg {
+  fill: @color-background-secondary;
+}
+
+.social-list__link {
+  display: block;
+  width: 48px;
+  height: 48px;
+
+  &:hover svg {
+    fill: @color-background-hover;
+  }
+
+  &:active svg {
+    fill: @color-background-active;
+    opacity: 0.3;
+  }
+}
