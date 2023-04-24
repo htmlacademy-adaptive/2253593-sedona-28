@@ -11,6 +11,12 @@
 .search-hotel__description {
   margin: 0;
   margin-bottom: 32px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .search-hotel__search-button {
@@ -24,10 +30,6 @@
   &:active {
     background-color: @color-background-active;
     color: fade(@color-text-accent, 30%);
-  }
-
-  &:disabled {
-    background-color: @color-background-disabled;
   }
 }
 

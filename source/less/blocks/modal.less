@@ -16,10 +16,9 @@
 }
 
 .modal__error {
-  position: relative;
   background-color: @color-background-primary;
   padding: 45px 51px 35px 51px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
 }
 
@@ -46,16 +45,12 @@
     background-color: @color-background-active;
     color: fade(@color-text-accent, 30%);
   }
-
-  &:disabled {
-    background-color: @color-background-disabled;
-  }
 }
 
 .modal__success {
-  position: relative;
   background-color: @color-background-primary;
   text-align: center;
+  margin: auto;
 }
 
 .modal__success-wrapper {
@@ -84,10 +79,6 @@
     background-color: @color-background-active;
     color: fade(@color-text-accent, 30%);
   }
-
-  &:disabled {
-    background-color: @color-background-disabled;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -103,7 +94,6 @@
 
   .modal__success {
     width: 640px;
-    margin: 0 auto;
   }
 
   .modal__success-wrapper {
