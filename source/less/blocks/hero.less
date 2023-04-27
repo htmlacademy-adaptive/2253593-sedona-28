@@ -1,5 +1,4 @@
-.hero,
-.hero-inner {
+.hero {
   position: relative;
   background-color: @color-background-secondary;
   padding: 90px 19px 85px;
@@ -8,6 +7,11 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/background-mobile@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .hero::after {
@@ -17,9 +21,25 @@
   left: 0;
   width: 100%;
   height: 57px;
-  background-image: url("../img/index/hero-triangle.svg");
+  background-image: url("../img/index/hero-triangle-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero-inner {
+  position: relative;
+  background-color: @color-background-secondary;
+  padding: 52px 25px 67px;
+  text-align: center;
+  background-image: url("../img/index/background-mobile.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/background-mobile@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .hero-inner::after {
@@ -29,7 +49,59 @@
   left: 0;
   width: 100%;
   height: 57px;
-  background-image: url("../img/index/hero-triangle.svg");
+  background-image: url("../img/index/hero-triangle-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .hero {
+    position: relative;
+    background-color: @color-background-secondary;
+    padding: 77px 50px 91px;
+    text-align: center;
+    background-image: url("../img/index/background-tablet.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/background-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .hero::after {
+    background-image: url("../img/index/hero-triangle-tablet.svg");
+  }
+
+  .hero-inner {
+    position: relative;
+    background-color: @color-background-secondary;
+    padding: 95px 50px 117px;
+    text-align: center;
+    background-image: url("../img/index/background-tablet.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/background-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .hero-inner::after {
+    background-image: url("../img/index/hero-triangle-tablet.svg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero::after {
+    background-image: url("../img/index/hero-triangle-desktop.svg");
+  }
+
+  .hero-inner::after {
+    background-image: url("../img/index/hero-triangle-desktop.svg");
+  }
 }
