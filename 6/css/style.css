@@ -945,7 +945,8 @@ a {
   height: 57px;
   background-image: url("../img/index/hero-triangle-mobile.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 57px;
+  background-position: bottom;
 }
 .hero-inner {
   position: relative;
@@ -972,7 +973,8 @@ a {
   height: 57px;
   background-image: url("../img/index/hero-triangle-mobile.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 57px;
+  background-position: bottom;
 }
 @media (min-width: 768px) {
   .hero {
@@ -987,6 +989,7 @@ a {
   }
   .hero::after {
     background-image: url("../img/index/hero-triangle-tablet.svg");
+    background-size: cover;
   }
   .hero-inner {
     position: relative;
@@ -1000,6 +1003,7 @@ a {
   }
   .hero-inner::after {
     background-image: url("../img/index/hero-triangle-tablet.svg");
+    background-size: cover;
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
