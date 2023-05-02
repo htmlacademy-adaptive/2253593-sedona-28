@@ -88,6 +88,7 @@ a {
 }
 .advantages__picture {
   display: block;
+  width: 100%;
 }
 .advantages__list-text {
   color: #000000;
@@ -139,6 +140,10 @@ a {
   .advantages__item-picture {
     width: 66.66%;
     padding: 0;
+  }
+  .advantages__picture {
+    object-fit: cover;
+    min-height: 256px;
   }
   .advantages__list-text {
     padding: 0;
@@ -201,6 +206,7 @@ a {
 }
 .catalog-photo__picture {
   display: block;
+  width: 100%;
 }
 .catalog-photo__title {
   margin: 0;
@@ -946,7 +952,7 @@ a {
   background-image: url("../img/index/hero-triangle-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% 57px;
-  background-position: bottom;
+  background-position: center bottom;
 }
 .hero-inner {
   position: relative;
@@ -974,7 +980,7 @@ a {
   background-image: url("../img/index/hero-triangle-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% 57px;
-  background-position: bottom;
+  background-position: center bottom;
 }
 @media (min-width: 768px) {
   .hero {
@@ -989,7 +995,6 @@ a {
   }
   .hero::after {
     background-image: url("../img/index/hero-triangle-tablet.svg");
-    background-size: cover;
   }
   .hero-inner {
     position: relative;
@@ -1003,7 +1008,6 @@ a {
   }
   .hero-inner::after {
     background-image: url("../img/index/hero-triangle-tablet.svg");
-    background-size: cover;
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
