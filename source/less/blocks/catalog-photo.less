@@ -143,11 +143,19 @@
 
   .catalog-photo__title-card {
     padding-right: 100px;
+
+    &:first-child {
+      padding-right: 200px;
+    }
   }
 
   .catalog-photo__author-name {
     margin-bottom: 0;
     padding-right: 100px;
+
+    &:first-of-type {
+      padding-right: 200px;
+    }
   }
 
   .catalog-photo__wrapper-like {
@@ -155,6 +163,11 @@
     top: 27px;
     right: 20px;
     column-gap: 9px;
+    padding-left: 265px;
+
+    &:first-of-type {
+      padding-left: 435px;
+    }
   }
 }
 
