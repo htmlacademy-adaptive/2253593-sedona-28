@@ -3,7 +3,7 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import browser, { reload } from 'browser-sync';
+import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
@@ -11,7 +11,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import del from 'del';
+import {deleteAsync} from 'del';
 
 // Styles
 
@@ -59,7 +59,7 @@ const copyImages = () => {
 
 // WebP
 
-const createWebP = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh({
     webp: {}
@@ -100,7 +100,7 @@ const copy = (done) => {
 // Clean
 
 const clean = () => {
-return del('build');
+return deleteAsync('build');
 }
 
 // Server
@@ -122,14 +122,14 @@ const server = (done) => {
 const reload = (done) => {
   browser.reload();
   done();
-}
+  }
 
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
