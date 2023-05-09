@@ -106,7 +106,6 @@
   color: @color-text-accent;
   display: block;
   text-align: center;
-  font-weight: 700;
   padding: 17px 50px 12px;
 
   &:hover:not(&--current) {
@@ -124,6 +123,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    position: relative;
+  }
+
   .main-nav--opened::after {
     display: none;
   }
