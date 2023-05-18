@@ -10,12 +10,10 @@
   <link rel="stylesheet" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="/fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
   <meta name="description" content="Фотографии и видео города Седона.">
 </head>
 
-<body class="page__body">
+<body class="page__body js-webp">
   <header class="main-header">
     <a class="main-header__logo main-header__logo--status" href="index.html">
       <img class="main-header__logo-image" src="img/header/logo.svg" width="185" height="96" alt="Городок Седона.">
@@ -43,11 +41,11 @@
   <main class="catalog">
     <section class="hero-inner">
       <h1 class="visually-hidden">Каталог фото и видео города Седона.</h1>
-      <img src="img/catalog/sedona.svg" width="229" height="39" alt="Седона.">
+      <img class="hero-inner__image" src="img/catalog/sedona.svg" width="229" height="39" alt="Седона.">
     </section>
     <section class="catalog-photo">
       <div class="catalog-photo__wrapper">
-        <h2 class="catalog-photo__title title">Фото и видео</h2>
+        <h2 class="catalog-photo__title title title--size">Фото и видео</h2>
         <p class="catalog-photo__description description">Не можете решиться на путешествие из-за курса? Фотографии
           помогут вам забыть о политике и экономике.</p>
       </div>
@@ -55,6 +53,13 @@
         <li class="catalog-photo__item">
           <a class="catalog-photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 769px)"
+                srcset="img/catalog/photo-1-desktop.webp 1x, img/catalog/photo-1-desktop@2x.webp 2x" width="1200"
+                height="400">
+              <source type="image/webp" media="(min-width: 321px) and (max-width: 768px)"
+                srcset="img/catalog/photo-1-tablet.webp 1x, img/catalog/photo-1-tablet@2x.webp 2x" width="648" height="400">
+              <source type="image/webp" srcset="img/catalog/photo-1-mobile.webp 1x, img/catalog/photo-1-mobile@2x.webp 2x"
+                width="280" height="280">
               <source media="(min-width: 769px)"
                 srcset="img/catalog/photo-1-desktop.jpg 1x, img/catalog/photo-1-desktop@2x.jpg 2x" width="1200"
                 height="400">
@@ -81,6 +86,13 @@
         <li class="catalog-photo__item">
           <a class="catalog-photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 769px)"
+                srcset="img/catalog/photo-2-desktop.webp 1x, img/catalog/photo-2-desktop@2x.webp 2x" width="1200"
+                height="400">
+              <source type="image/webp" media="(min-width: 321px) and (max-width: 768px)"
+                srcset="img/catalog/photo-2-tablet.webp 1x, img/catalog/photo-2-tablet@2x.webp 2x" width="648" height="400">
+              <source type="image/webp" srcset="img/catalog/photo-2-mobile.webp 1x, img/catalog/photo-2-mobile@2x.webp 2x"
+                width="280" height="280">
               <source media="(min-width: 769px)"
                 srcset="img/catalog/photo-2-desktop.jpg 1x, img/catalog/photo-2-desktop@2x.jpg 2x" width="1200"
                 height="400">
@@ -107,6 +119,13 @@
         <li class="catalog-photo__item">
           <a class="catalog-photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 769px)"
+                srcset="img/catalog/photo-3-desktop.webp 1x, img/catalog/photo-3-desktop@2x.webp 2x" width="1200"
+                height="400">
+              <source type="image/webp" media="(min-width: 321px) and (max-width: 768px)"
+                srcset="img/catalog/photo-3-tablet.webp 1x, img/catalog/photo-3-tablet@2x.webp 2x" width="648" height="400">
+              <source type="image/webp" srcset="img/catalog/photo-3-mobile.webp 1x, img/catalog/photo-3-mobile@2x.webp 2x"
+                width="280" height="280">
               <source media="(min-width: 769px)"
                 srcset="img/catalog/photo-3-desktop.jpg 1x, img/catalog/photo-3-desktop@2x.jpg 2x" width="1200"
                 height="400">
@@ -134,6 +153,13 @@
         <li class="catalog-photo__item">
           <a class="catalog-photo__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 769px)"
+                srcset="img/catalog/photo-4-desktop.webp 1x, img/catalog/photo-4-desktop@2x.webp 2x" width="1200"
+                height="400">
+              <source type="image/webp" media="(min-width: 321px) and (max-width: 768px)"
+                srcset="img/catalog/photo-4-tablet.webp 1x, img/catalog/photo-4-tablet@2x.webp 2x" width="648" height="400">
+              <source type="image/webp" srcset="img/catalog/photo-4-mobile.webp 1x, img/catalog/photo-4-mobile@2x.webp 2x"
+                width="280" height="280">
               <source media="(min-width: 769px)"
                 srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x" width="1200"
                 height="400">
@@ -162,12 +188,18 @@
     </section>
     <section class="catalog-video">
       <div class="catalog-video__wrapper-text">
-        <h2 class="catalog-video__title title">Все еще сомневаетесь?</h2>
+        <h2 class="catalog-video__title title title--size">Все еще сомневаетесь?</h2>
         <p class="catalog-video__description description">Смотрите видеопрезентацию и скорее за билетами, пока они не
           подорожали в очередной раз!</p>
       </div>
       <div class="catalog-video__wrapper-video">
         <picture>
+          <source type="image/webp" media="(min-width: 769px)"
+            srcset="img/catalog/video-desktop.webp 1x, img/catalog/video-desktop@2x.webp 2x" width="1200" height="400">
+          <source type="image/webp" media="(min-width: 321px) and (max-width: 768px)"
+            srcset="img/catalog/video-tablet.webp 1x, img/catalog/video-tablet@2x.webp 2x" width="648" height="400">
+          <source type="image/webp" srcset="img/catalog/video-mobile.webp 1x, img/catalog/video-mobile@2x.webp 2x"
+            width="280" height="177">
           <source media="(min-width: 769px)"
             srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x" width="1200" height="400">
           <source media="(min-width: 321px) and (max-width: 768px)"
