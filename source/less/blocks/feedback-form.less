@@ -1,7 +1,7 @@
 .feedback-form__group {
   padding: 0;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   border: none;
 
   &:not(:last-child)::after {
@@ -16,8 +16,12 @@
 
 .feedback-form__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   text-align: center;
+}
+
+.feedback-form__title--indent {
+  margin-bottom: 20px;
 }
 
 .feedback-form__list {
@@ -83,8 +87,8 @@
     height: 58px;
     background-image: url("../img/form/email-icon.svg");
     background-repeat: no-repeat;
-    background-size: 18px 18px;
-    background-position: center right 20px;
+    background-size: 16px 12px;
+    background-position: 21px 22px;
   }
 }
 
@@ -127,7 +131,7 @@
 }
 
 .feedback-form__group-textarea {
-  margin-bottom: 56px;
+  margin-bottom: 49px;
   text-align: center;
 }
 
@@ -169,8 +173,8 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 42px 58px;
-    margin-bottom: 48px;
+    gap: 38px 58px;
+    margin-bottom: 41px;
   }
 
   .feedback-form__group:not(:last-child)::after {
@@ -285,7 +289,7 @@
   }
 
   .feedback-form__list-name {
-    padding-bottom: 23px;
+    padding-bottom: 25px;
   }
 
   .feedback-form__list-contacts {
@@ -295,8 +299,8 @@
   .feedback-form__list-impression {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 36px 6px;
-    gap: 16px;
+    padding: 0 36px 10px;
+    column-gap: 16px;
   }
 
   .feedback-form__item-impression {
@@ -314,7 +318,7 @@
   .feedback-form__list-signts {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 84px;
+    padding: 0 84px 5px;
     gap: 16px 32px;
   }
 
@@ -327,6 +331,7 @@
 @media (min-width: @desktop-width) {
   .feedback-form {
     gap: 56px 100px;
+    margin-bottom: 43px;
   }
 
   .feedback-form__group:first-child {
@@ -382,6 +387,7 @@
 
   .feedback-form__list-impression {
     align-items: center;
+    justify-content: center;
     padding: 17px 23px;
     gap: 28px;
   }
