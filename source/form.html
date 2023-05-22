@@ -10,14 +10,15 @@
   <link rel="stylesheet" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <meta name="description" content="Форма отзыва о городе Седона.">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo main-header__logo--status" href="index.html">
-      <img src="img/header/logo.svg" width="185" height="96" alt="Городок Седона.">
+      <img class="main-header__logo-image" src="img/header/logo.svg" width="185" height="96" alt="Городок Седона.">
     </a>
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
@@ -40,11 +41,11 @@
   <main class="form">
     <section class="hero-inner">
       <h1 class="visually-hidden">Форма отзыва.</h1>
-      <img src="img/catalog/sedona.svg" width="229" height="39" alt="Седона.">
+      <img class="hero-inner__image" src="img/catalog/sedona.svg" width="229" height="39" alt="Седона.">
     </section>
     <section class="feedback">
       <div class="feedback__wrapper">
-        <h2 class="feedback__title title">Оставьте свой отзыв</h2>
+        <h2 class="feedback__title title title--size-feedback">Оставьте свой отзыв</h2>
         <p class="feedback__description description">Помогите нашим отелям стать лучше! Оставьте отзыв о
           них, а также о посещенных вами достопримечательностях</p>
       </div>
@@ -76,20 +77,20 @@
               <label class="feedback-form__label" for="phone">Контактный телефон*:</label>
               <p class="feedback-form__field-phone">
                 <input class="feedback-form__input feedback-form__input-phone feedback-form__input--color" type="tel"
-                id="phone" name="phone" placeholder="Введите телефон" required>
+                  id="phone" name="phone" placeholder="Введите телефон" required>
               </p>
             </li>
             <li class="feedback-form__item feedback-form__item-email">
               <label class="feedback-form__label" for="email">Электронная почта*:</label>
               <p class="feedback-form__field-email">
                 <input class="feedback-form__input feedback-form__input-email feedback-form__input--color" type="email"
-                id="email" name="email" placeholder="Введите e-mail" required>
+                  id="email" name="email" placeholder="Введите e-mail" required>
               </p>
             </li>
           </ul>
         </fieldset>
         <fieldset class="feedback-form__group">
-          <legend class="feedback-form__title title">Ваше общее впечатление:</legend>
+          <legend class="feedback-form__title title feedback-form__title--indent">Ваше общее впечатление:</legend>
           <ul class="feedback-form__list feedback-form__list-impression">
             <li class="feedback-form__item feedback-form__item-impression">
               <label class="feedback-form__label-control control">
@@ -154,7 +155,7 @@
           </ul>
         </fieldset>
         <fieldset class="feedback-form__group feedback-form__group-textarea">
-          <legend class="feedback-form__title title">Опишите свои эмоции:</legend>
+          <legend class="feedback-form__title title feedback-form__title--indent">Опишите свои эмоции:</legend>
           <label class="feedback-form__label-textarea">
             <textarea class="feedback-form__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
@@ -226,25 +227,25 @@
   </footer>
   <div class="modal modal--close">
     <div class="modal__error">
-      <h2 class="modal__title title title--size">Что-то пошло не&nbsp;так!</h2>
+      <h2 class="modal__title title title--modal-error modal__title--indent">Что-то пошло не&nbsp;так!</h2>
       <p class="modal__error-description description">Проверьте поля, выделенные красным, скорее всего вы забыли их
         заполнить</p>
-      <button class="modal-error-button button" type="button">ОК</button>
+      <button class="modal__error-button button" type="button">ОК</button>
     </div>
   </div>
   <div class="modal modal--close">
     <div class="modal__success">
       <div class="modal__success-wrapper">
-        <h2 class="modal__title title title--size">Ваш отзыв отправлен!</h2>
+        <h2 class="modal__title title title--size-modal">Ваш отзыв отправлен!</h2>
         <p class="modal__success-description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
           В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
       </div>
       <div class="modal__button-wrapper">
-        <button class="modal-success-button button" type="button">Закрыть окно</button>
+        <button class="modal__success-button button" type="button">Закрыть окно</button>
       </div>
     </div>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js" async></script>
 </body>
 
 </html>
