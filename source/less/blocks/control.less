@@ -30,6 +30,10 @@
     background-color: @color-background-input-hover;
   }
 
+  &:focus {
+    outline: @color-background-input-focus;
+  }
+
   &:active {
     background-color: @color-background-radio-active;
     opacity: 0.3;
@@ -62,6 +66,10 @@
   background-image: url("../img/form/tick.svg");
   background-size: 22px 16px;
   background-repeat: no-repeat;
+}
+
+.control__input:focus {
+  outline: @color-background-input-focus;
 }
 
 .control__input:disabled + .control__mark {
