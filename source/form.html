@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="/css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -160,11 +161,11 @@
             <textarea class="feedback-form__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
+        <div class="feedback__wrapper-form">
+          <button class="feedback__button button" type="submit">Отправить отзыв</button>
+          <p class="feedback__note">* — обязательные поля</p>
+        </div>
       </form>
-      <div class="feedback__wrapper-form">
-        <button class="feedback__button button" type="submit">Отправить отзыв</button>
-        <p class="feedback__note">* — обязательные поля</p>
-      </div>
     </section>
   </main>
   <footer class="main-footer">
