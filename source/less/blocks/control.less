@@ -30,10 +30,6 @@
     background-color: @color-background-input-hover;
   }
 
-  &:focus {
-    outline: @color-background-input-focus;
-  }
-
   &:active {
     background-color: @color-background-radio-active;
     opacity: 0.3;
@@ -68,8 +64,8 @@
   background-repeat: no-repeat;
 }
 
-.control__input:focus {
-  outline: @color-background-input-focus;
+.control__input:focus + .control__mark {
+  outline: 1px solid @color-background-input-focus;
 }
 
 .control__input:disabled + .control__mark {
